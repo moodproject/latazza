@@ -17,7 +17,7 @@ import datatype.Selling;
 public class Main {
 
     protected static final Euro BoxPrice = new Euro(31);
-    protected static final Euro SmallBugsPrice = new Euro(0.62);
+    protected static final Euro SmallBagsPrice = new Euro(0.62);
 
     protected Euro cassa;
     protected Selling situazione_prodotti;
@@ -50,7 +50,7 @@ public class Main {
         pAnagrafe = new EmployeeRegister(conn);
 
         rif = new Supply(pCassa, pMagazzino, BoxPrice);
-        acq = new Purchase(pCassa, pMagazzino, pAnagrafe, SmallBugsPrice);
+        acq = new Purchase(pCassa, pMagazzino, pAnagrafe, SmallBagsPrice);
         pag = new Payment(pCassa, pAnagrafe);
     }
 
@@ -77,7 +77,7 @@ public class Main {
 
     public void showDepository() {
         System.out.println("Depository");
-        pMagazzino.showQuantityOfSmallBugs().printSelling();
+        pMagazzino.showQuantityOfSmallBags().printSelling();
     }
 
     public void close() {
@@ -91,11 +91,11 @@ public class Main {
 
     public void setDepository(int caffe, int arabico, int the, int thelimone, int camomilla) {
         pMagazzino.resetToZeroDepository();
-        pMagazzino.enterSmallBugs(Beverages.CAFFE, caffe);
-        pMagazzino.enterSmallBugs(Beverages.ARABICO, arabico);
-        pMagazzino.enterSmallBugs(Beverages.THE, the);
-        pMagazzino.enterSmallBugs(Beverages.THELIMONE, thelimone);
-        pMagazzino.enterSmallBugs(Beverages.CAMOMILLA, camomilla);
+        pMagazzino.enterSmallBags(Beverages.CAFFE, caffe);
+        pMagazzino.enterSmallBags(Beverages.ARABICO, arabico);
+        pMagazzino.enterSmallBags(Beverages.THE, the);
+        pMagazzino.enterSmallBags(Beverages.THELIMONE, thelimone);
+        pMagazzino.enterSmallBags(Beverages.CAMOMILLA, camomilla);
     }
 
     public void deleteAllTheEmployeesFromTheDataBase() {

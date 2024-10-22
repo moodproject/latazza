@@ -21,7 +21,7 @@ public class Supply {
     public boolean supply(Beverages tipoBust, int quanteScatole) {
         Euro costoRifornimento = boxPrice.multiply(quanteScatole);
         if (!rCassa.show().major(costoRifornimento) || rCassa.show().equalTo(costoRifornimento)) {
-            rMagazzino.enterSmallBugs(tipoBust, quanteScatole * 50);
+            rMagazzino.enterSmallBags(tipoBust, quanteScatole * 50);
             rCassa.subtractMoney(costoRifornimento);
             System.out.println("done");
             return true;

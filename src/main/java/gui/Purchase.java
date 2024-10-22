@@ -13,39 +13,39 @@ public class Purchase {
     private Depository aMagazzino;
     private EmployeeRegister aAnagrafe;
 
-    private Euro smallBugsPrice;
+    private Euro smallBagsPrice;
 
     public Purchase(CashAccount cassa, Depository magazzino, EmployeeRegister anag, Euro price) {
         aCassa = cassa;
 
         aMagazzino = magazzino;
         aAnagrafe = anag;
-        smallBugsPrice = price;
+        smallBagsPrice = price;
     }
 
-    public void purchaseVisitor(Beverages typeSmallBugs, int numberSmallBugs) {
-        if (aMagazzino.areThereSmallBugs(typeSmallBugs, numberSmallBugs)) {
-            Euro costoTotaleBustine = smallBugsPrice.multiply(numberSmallBugs);
+    public void purchaseVisitor(Beverages typeSmallBags, int numberSmallBags) {
+        if (aMagazzino.areThereSmallBags(typeSmallBags, numberSmallBags)) {
+            Euro costoTotaleBustine = smallBagsPrice.multiply(numberSmallBags);
             aCassa.addMoney(costoTotaleBustine);
-            aMagazzino.goOutSmallBugs(typeSmallBugs, numberSmallBugs);
+            aMagazzino.goOutSmallBags(typeSmallBags, numberSmallBags);
             System.out.println("done");
         } else {
-            System.out.println("small-bugs finished");
+            System.out.println("small bags finished");
         }
     }
 
-    public void purchaseEmployee(Employee p, Beverages typeSmallBugs, int numberSmallBugs, boolean accr) {
+    public void purchaseEmployee(Employee p, Beverages typeSmallBags, int numberSmallBags, boolean accr) {
         if (accr) {
-            if (aMagazzino.areThereSmallBugs(typeSmallBugs, numberSmallBugs)) {
-                Euro costoTotaleBustine = smallBugsPrice.multiply(numberSmallBugs);
+            if (aMagazzino.areThereSmallBags(typeSmallBags, numberSmallBags)) {
+                Euro costoTotaleBustine = smallBagsPrice.multiply(numberSmallBags);
                 aAnagrafe.debit(p, costoTotaleBustine);
-                aMagazzino.goOutSmallBugs(typeSmallBugs, numberSmallBugs);
+                aMagazzino.goOutSmallBags(typeSmallBags, numberSmallBags);
                 System.out.println("done");
             } else {
-                System.out.println("small-bugs finished");
+                System.out.println("small bags finished");
             }
         } else {
-            purchaseVisitor(typeSmallBugs, numberSmallBugs);
+            purchaseVisitor(typeSmallBags, numberSmallBags);
         }
     }
 

@@ -29,23 +29,23 @@ public class Selling {
 	}
 	
 	// get
-	public int getCoffeeSmallBugs() {
+	public int getCoffeeSmallBags() {
 		return coffee;
 	}
 	
-	public int getArabicSmallBugs() {
+	public int getArabicSmallBags() {
 		return arabicCoffee;
 	}
 	
-	public int getTeaSmallBugs() {
+	public int getTeaSmallBags() {
 		return tea;
 	}
 	
-	public int getLemonTeaSmallBugs() {
+	public int getLemonTeaSmallBags() {
 		return lemonTea;
 	}
 	
-	public int getCamomileSmallBugs() {
+	public int getCamomileSmallBags() {
 		return camomileTea;
 	}
 }

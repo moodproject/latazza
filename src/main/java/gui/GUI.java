@@ -19,8 +19,8 @@ public class GUI {
         System.out.print("1.Cash account ");
         System.out.print("2.Depository ");
         System.out.print("3.Debtors ");
-        System.out.print("4.Supply of small-bugs ");
-        System.out.print("5.Sell small-bugs ");
+        System.out.print("4.Supply of small bags ");
+        System.out.print("5.Sell small bags ");
         System.out.print("6.Payment ");
         System.out.print("7.Update Employee ");
         System.out.print("0.Close\n");
@@ -151,7 +151,7 @@ public class GUI {
                 supplyMenu();
         }
 
-        String numeroScatole = inputOutput("\nInsert number of small-bugs: ");
+        String numeroScatole = inputOutput("\nInsert number of small bags: ");
         int numero = stringToInt(numeroScatole);
 
         if (cash) {

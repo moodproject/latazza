@@ -13,10 +13,10 @@ public class Depository extends GeneralDepository {
         conn = c;
     }
 
-    public void enterSmallBugs(Beverages tipoBust, int quante) {
+    public void enterSmallBags(Beverages tipoBust, int quante) {
         try {
             PreparedStatement stmt = conn.prepareStatement("UPDATE MAGAZZINO SET QUANTE = ? WHERE PRODOTTO = ? ");
-            int tot_bustine = numberOfSmallBugsDB(tipoBust) + quante;
+            int tot_bustine = numberOfSmallBagsDB(tipoBust) + quante;
             stmt.setInt(1, tot_bustine);
             stmt.setString(2, tipoBust.toString());
             stmt.executeUpdate();
@@ -26,10 +26,10 @@ public class Depository extends GeneralDepository {
         }
     }
 
-    public void goOutSmallBugs(Beverages tipoBust, int quante) {
+    public void goOutSmallBags(Beverages tipoBust, int quante) {
         try {
             PreparedStatement stmt = conn.prepareStatement("UPDATE MAGAZZINO SET QUANTE = ? WHERE PRODOTTO = ? ");
-            int tot_bustine = numberOfSmallBugsDB(tipoBust) - quante;
+            int tot_bustine = numberOfSmallBagsDB(tipoBust) - quante;
             stmt.setInt(1, tot_bustine);
             stmt.setString(2, tipoBust.toString());
             stmt.executeUpdate();
@@ -39,21 +39,21 @@ public class Depository extends GeneralDepository {
         }
     }
 
-    public boolean areThereSmallBugs(Beverages tipoBust, int quante) {
-        return (numberOfSmallBugsDB(tipoBust) >= quante);
+    public boolean areThereSmallBags(Beverages tipoBust, int quante) {
+        return (numberOfSmallBagsDB(tipoBust) >= quante);
     }
 
-    public Selling showQuantityOfSmallBugs() {
+    public Selling showQuantityOfSmallBags() {
         return new Selling(
-                numberOfSmallBugsDB(Beverages.CAFFE),
-                numberOfSmallBugsDB(Beverages.ARABICO),
-                numberOfSmallBugsDB(Beverages.THE),
-                numberOfSmallBugsDB(Beverages.THELIMONE),
-                numberOfSmallBugsDB(Beverages.CAMOMILLA)
+                numberOfSmallBagsDB(Beverages.CAFFE),
+                numberOfSmallBagsDB(Beverages.ARABICO),
+                numberOfSmallBagsDB(Beverages.THE),
+                numberOfSmallBagsDB(Beverages.THELIMONE),
+                numberOfSmallBagsDB(Beverages.CAMOMILLA)
         );
     }
 
-    public int numberOfSmallBugsDB(Beverages tipoBust) {
+    public int numberOfSmallBagsDB(Beverages tipoBust) {
         int result = 0;
         try {
             Statement stmt = conn.createStatement();
@@ -72,7 +72,7 @@ public class Depository extends GeneralDepository {
     }
 
     public void visualizeDepositoryDB() {
-        showQuantityOfSmallBugs().printSelling();
+        showQuantityOfSmallBags().printSelling();
     }
 
     public void resetToZeroDepository() {
@@ -101,10 +101,10 @@ public class Depository extends GeneralDepository {
 
     public void setDepository(int caffe, int arabico, int the, int thelimone, int camomilla) {
         resetToZeroDepository();
-        enterSmallBugs(Beverages.CAFFE, caffe);
-        enterSmallBugs(Beverages.ARABICO, arabico);
-        enterSmallBugs(Beverages.THE, the);
-        enterSmallBugs(Beverages.THELIMONE, thelimone);
-        enterSmallBugs(Beverages.CAMOMILLA, camomilla);
+        enterSmallBags(Beverages.CAFFE, caffe);
+        enterSmallBags(Beverages.ARABICO, arabico);
+        enterSmallBags(Beverages.THE, the);
+        enterSmallBags(Beverages.THELIMONE, thelimone);
+        enterSmallBags(Beverages.CAMOMILLA, camomilla);
     }
 }

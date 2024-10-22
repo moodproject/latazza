@@ -18,7 +18,7 @@ public class GeneralDepository {
         this.camomilla = 0;
     }
 
-    public void enterSmallBugs(Beverages tipoBust, int number) {
+    public void enterSmallBags(Beverages tipoBust, int number) {
         switch (tipoBust) {
             case CAFFE:
                 caffe = caffe + number;
@@ -38,7 +38,7 @@ public class GeneralDepository {
         }
     }
 
-    public void goOutSmallBugs(Beverages tipoBust, int number) {
+    public void goOutSmallBags(Beverages tipoBust, int number) {
         switch (tipoBust) {
             case CAFFE:
                 caffe = caffe - number;
@@ -68,10 +68,10 @@ public class GeneralDepository {
 
     public void setDepository(int caffe, int arabico, int the, int thelimone, int camomilla) {
         resetToZeroDepository();
-        enterSmallBugs(Beverages.CAFFE, caffe);
-        enterSmallBugs(Beverages.ARABICO, arabico);
-        enterSmallBugs(Beverages.THE, the);
-        enterSmallBugs(Beverages.THELIMONE, thelimone);
-        enterSmallBugs(Beverages.CAMOMILLA, camomilla);
+        enterSmallBags(Beverages.CAFFE, caffe);
+        enterSmallBags(Beverages.ARABICO, arabico);
+        enterSmallBags(Beverages.THE, the);
+        enterSmallBags(Beverages.THELIMONE, thelimone);
+        enterSmallBags(Beverages.CAMOMILLA, camomilla);
     }
 }
