@@ -40,7 +40,7 @@ public class Main {
             ex.printStackTrace();
         }
         try {
-            conn = DriverManager.getConnection("jdbc:h2:lavazza", "sa", "");
+            conn = DriverManager.getConnection("jdbc:h2:latazza", "sa", "");
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
