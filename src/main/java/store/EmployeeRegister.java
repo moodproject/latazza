@@ -52,7 +52,7 @@ public class EmployeeRegister {
                 Euro saldo = new Euro(saldo_double);
                 Employee p = new Employee(id, nome, cognome, saldo);
                 Euro zero = new Euro(0);
-                if (p.getBalance().minor(zero) || !p.getBalance().equalTo(zero)) {
+                if (!p.getBalance().minor(zero)) {
                     debitori.add(p);
                 }
             }

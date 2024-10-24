@@ -61,7 +61,7 @@ public class Main {
 
     public void showDebtors() {
         List<Employee> debitori = pAnagrafe.getDebtors();
-        System.out.println("Debtors");
+        System.out.println("Debtors:");
         for (Employee p : debitori) {
             p.printEmployee();
         }
@@ -69,14 +69,14 @@ public class Main {
 
     public void showAllEmployee() {
         List<Employee> list = pAnagrafe.readRegisterEmployeeDB();
-        System.out.println("Employees");
+        System.out.println("Employees:");
         for (Employee e : list) {
             e.printEmployee();
         }
     }
 
     public void showDepository() {
-        System.out.println("Depository");
+        System.out.println("Depository:");
         pMagazzino.showQuantityOfSmallBags().printSelling();
     }
 

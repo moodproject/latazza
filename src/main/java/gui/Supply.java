@@ -20,13 +20,13 @@ public class Supply {
 
     public boolean supply(Beverages tipoBust, int quanteScatole) {
         Euro costoRifornimento = boxPrice.multiply(quanteScatole);
-        if (!rCassa.show().major(costoRifornimento) || rCassa.show().equalTo(costoRifornimento)) {
+        if (rCassa.show().major(costoRifornimento) && rCassa.show().equalTo(costoRifornimento)) {
             rMagazzino.enterSmallBags(tipoBust, quanteScatole * 50);
             rCassa.subtractMoney(costoRifornimento);
-            System.out.println("done");
+            System.out.println("\nDone\n");
             return true;
         } else {
-            System.out.println("Cash account not sufficient");
+            System.out.println("\nCash account not sufficient\n");
             return false;
         }
     }

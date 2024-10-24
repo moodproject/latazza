@@ -22,7 +22,7 @@ public class Payment {
         pagAnagrafe.accredit(p, quanto);
         pagCassa.addMoney(quanto);
         pagCassa.addMoney(quanto);
-        System.out.println("done");
+        System.out.println("\nDone");
     }
 
     public EmployeeRegister getEmployeeRegister() {

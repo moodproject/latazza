@@ -28,9 +28,9 @@ public class Purchase {
             Euro costoTotaleBustine = smallBagsPrice.multiply(numberSmallBags);
             aCassa.addMoney(costoTotaleBustine);
             aMagazzino.goOutSmallBags(typeSmallBags, numberSmallBags);
-            System.out.println("done");
+            System.out.println("\nDone");
         } else {
-            System.out.println("small bags finished");
+            System.out.println("\nSmall bags finished");
         }
     }
 
@@ -40,9 +40,9 @@ public class Purchase {
                 Euro costoTotaleBustine = smallBagsPrice.multiply(numberSmallBags);
                 aAnagrafe.debit(p, costoTotaleBustine);
                 aMagazzino.goOutSmallBags(typeSmallBags, numberSmallBags);
-                System.out.println("done");
+                System.out.println("\nDone");
             } else {
-                System.out.println("small bags finished");
+                System.out.println("\nSmall bags finished");
             }
         } else {
             purchaseVisitor(typeSmallBags, numberSmallBags);

@@ -25,7 +25,7 @@ public class Euro {
 	
 	public int getCent() {
 		if (valore > 0) {
-			String valore_stringa = new Integer(valore).toString();
+			String valore_stringa = Integer.toString(valore);
 			int lunghezza = valore_stringa.length();
 			if (lunghezza >= 3){
 				String cent_stringa = valore_stringa.substring(lunghezza-2, lunghezza);
@@ -34,7 +34,7 @@ public class Euro {
 				return  Integer.parseInt(valore_stringa);
 			}
 		} if (valore < 0 ) {
-			String valore_stringa = new Integer(valore).toString();
+			String valore_stringa = Integer.toString(valore);
 			int lunghezza = valore_stringa.length();
 			if (lunghezza > 3){
 				String cent_stringa = valore_stringa.substring(lunghezza-2, lunghezza);
@@ -49,7 +49,7 @@ public class Euro {
 	
 	public int getEuro() {
 		if (valore > 0) {
-			String valore_stringa = new Integer(valore).toString();
+			String valore_stringa = Integer.toString(valore);
 			int lunghezza = valore_stringa.length();
 			if (lunghezza >= 3){
 				String euro_stringa = valore_stringa.substring(0, lunghezza-2);
@@ -58,7 +58,7 @@ public class Euro {
 				return  0;
 			}
 		} else if (valore < 0 ) {
-			String valore_stringa = new Integer(valore).toString();
+			String valore_stringa = Integer.toString(valore);
 			int lunghezza = valore_stringa.length();
 			if (lunghezza > 3){
 				String euro_stringa = valore_stringa.substring(0, lunghezza-2);
@@ -110,16 +110,16 @@ public class Euro {
     // restituisce la rappresentazione "stringa"
 	public String toString() {
 		if (this.getCent() > 0) {
-			String euro_stringa = new Integer(this.getEuro()).toString();
-			String cent_stringa = new Integer(this.getCent()).toString();
+			String euro_stringa = Integer.toString(this.getEuro());
+			String cent_stringa = Integer.toString(this.getCent());
 			return euro_stringa + "." + cent_stringa;
 		} else if (this.getCent() < 0) {
 			int cent = this.getCent() * (-1);
 			String euro_stringa = "-0";
-			String cent_stringa = new Integer(cent).toString();
+			String cent_stringa = Integer.toString(cent);
 			return euro_stringa + "." + cent_stringa;
 		} else {
-			return new Integer(this.getEuro()).toString();
+			return Integer.toString(this.getEuro());
 		}
 	}
 	

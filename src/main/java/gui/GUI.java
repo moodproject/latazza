@@ -62,10 +62,10 @@ public class GUI {
             String name = inputOutput("\nInsert the new name of the employee: ");
             String surname = inputOutput("\nInsert the new surname of the employee: ");
             main.getEmployeeRegister().updateEmployeeDB(id, name, surname);
-            System.out.println("Employee inserted correctly\n");
+            System.out.println("\nEmployee inserted correctly");
             mainMenu();
         } else {
-            System.out.println("Employee not in the database\n");
+            System.out.println("\nEmployee not in the database");
             updateEmployee();
         }
 
