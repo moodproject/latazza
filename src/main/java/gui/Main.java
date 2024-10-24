@@ -28,7 +28,6 @@ public class Main {
     protected Depository pMagazzino;
     protected EmployeeRegister pAnagrafe;
 
-    @SuppressWarnings("unused")
     protected Supply rif;
     protected Purchase acq;
     protected Payment pag;
@@ -42,7 +41,8 @@ public class Main {
         try {
             conn = DriverManager.getConnection("jdbc:h2:latazza", "sa", "");
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            System.err.println(ex.getMessage());        	
+            System.exit(-1);
         }
 
         pCassa = new CashAccount(conn);
