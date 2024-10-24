@@ -134,6 +134,7 @@ public class EmployeeRegister {
             Double saldo_double = rs.getDouble(1);
             saldoDB = new Euro(saldo_double);
             rs.close();
+            stmt.close();
             return saldoDB;
         } catch (SQLException ex) {
             ex.printStackTrace();
