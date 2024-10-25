@@ -65,7 +65,7 @@ public class GUI {
             System.out.println("\nEmployee inserted correctly");
             mainMenu();
         } else {
-            System.out.println("\nEmployee not in the database");
+            System.out.println("\nEmployee not in the database\n");
             updateEmployee();
         }
 
@@ -94,7 +94,7 @@ public class GUI {
                 t = Beverages.CAMOMILLA;
                 break;
             default:
-                System.out.println("not valid beverage");
+                System.out.println("\nNot valid beverage");
                 supplyMenu();
         }
         main.showCashAccount();
@@ -122,7 +122,7 @@ public class GUI {
                     }
                 }
             } else {
-                System.out.println("Employee not in the database");
+                System.out.println("\nEmployee not in the database");
                 purchaseMenu();
             }
         }
