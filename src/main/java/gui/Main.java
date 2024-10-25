@@ -41,7 +41,7 @@ public class Main {
         try {
             conn = DriverManager.getConnection("jdbc:h2:latazza", "sa", "");
         } catch (SQLException ex) {
-            System.err.println(ex.getMessage());        	
+            ex.printStackTrace();        	
             System.exit(-1);
         }
 

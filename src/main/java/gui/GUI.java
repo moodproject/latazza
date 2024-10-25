@@ -48,7 +48,7 @@ public class GUI {
             case 7:
                 updateEmployee();
             default:
-                System.out.println("not valid key");
+                System.out.println("\n Not valid key");
                 mainMenu();
         }
     }
@@ -94,8 +94,8 @@ public class GUI {
                 t = Beverages.CAMOMILLA;
                 break;
             default:
-                System.out.println("\nNot valid beverage");
-                supplyMenu();
+                System.out.println("\nOperation aborted: a valid beverage was required");
+                mainMenu();
         }
         main.showCashAccount();
         main.getRif().supply(t, numero);
@@ -148,8 +148,8 @@ public class GUI {
                 t = Beverages.CAMOMILLA;
                 break;
             default:
-                System.out.println("\nNot valid beverage");
-                supplyMenu();
+                System.out.println("\nOperation aborted: a valid beverage was required");
+                mainMenu();
         }
 
         String numeroScatole = inputOutput("\nInsert number of small bags: ");
@@ -187,7 +187,7 @@ public class GUI {
         	Euro e = new Euro(euro_double);
             main.getPayment().pay(persona, e);
 		} catch (NumberFormatException nfe) {
-			System.out.println("\nOperation aborted: a number was required \n");
+			System.out.println("\nOperation aborted: a number was required");
 		}
         mainMenu();
     }
@@ -210,7 +210,7 @@ public class GUI {
         try {
             returnInt = Integer.parseInt(value);
         } catch (NumberFormatException e) {
-            System.out.println("\nOperation aborted: an integer was required\n");
+            System.out.println("\nOperation aborted: an integer was required");
             mainMenu();
         }
         return returnInt;
