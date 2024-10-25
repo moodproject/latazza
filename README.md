@@ -1,5 +1,5 @@
 # LaTazza
-_LaTazza_ è un programma per gestire la fornitura di bustine di bevande calde (ovvero caffè, caffè arabico, tè, tè al limone e tè alla camomilla) e la loro vendita agli impiegati aziendali e ai visitatori.
+_LaTazza_ è un programma per gestire la fornitura di bustine di bevande calde (ovvero caffè, caffè arabico, tè, tè al limone e tè alla camomilla) e la loro vendita ad impiegati aziendali e ai visitatori.
 
 ## Descrizione
 In _LaTazza_, la segretaria aziendale può:
@@ -21,4 +21,4 @@ Il progetto è basato su Maven. Seguono alcune istruzioni utili per gli sviluppa
 | Per compilare il progetto | Digita `mvn compile` |
 | Per eseguire il progetto | Digita `mvn compile exec:java` |
 
-**Nota che:** _LaTazza_ è un'applicazione ad istanza singola, se si prova a avviare un seconda istanza di _LaTazza_ si ottiene un'eccezzione di tipo ```org.h2.jdbc.JdbcSQLException``` e il seguente messaggio di errore ```Database may be already in use: Locked by another process. Possible solutions: close all other connection(s); use the server mode [90020-119]'''.
+**Nota che:** _LaTazza_ è un'applicazione ad istanza singola, se si prova a avviare un seconda istanza di _LaTazza_ si ottiene un'eccezzione di tipo ```org.h2.jdbc.JdbcSQLException``` e il seguente messaggio di errore ```Database may be already in use: Locked by another process. Possible solutions: close all other connection(s); use the server mode [90020-119]```.
