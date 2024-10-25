@@ -1,11 +1,11 @@
 # LaTazza
-_LaTazza_ è un programma per gestire la fornitura di bustine di bevande calde (ovvero caffè, caffè arabico, tè, tè al limone e tè alla camomilla) e la loro vendita ad impiegati aziendali e ai visitatori.
+_LaTazza_ è un programma per gestire la fornitura di bustine di bevande calde (ovvero caffè, caffè arabico, tè, tè al limone e tè alla camomilla) e la loro vendita ad impiegati aziendali e visitatori.
 
 ## Descrizione
 In _LaTazza_, la segretaria aziendale può:
 * Visualizzare il saldo in cassa;
-* Visualizzare il numero di bustine disponibili in deposito di ciascuna bevanda calda;
-* Visualizzare l’elenco degli impiegati debitori;
+* Visualizzare la quantità di bustine disponibili in deposito per ciascuna bevanda calda;
+* Visualizzare l'elenco degli impiegati debitori;
 * Registrare una fornitura di bustine di una bevanda calda;
 * Registrare la vendita di bustine di una bevanda calda ad impiegati (i quali possono pagare a credito) e visitatori;
 * Aggiornare il credito degli impiegati;
