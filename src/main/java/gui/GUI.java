@@ -110,6 +110,7 @@ public class GUI {
         String aCreditoStringa = inputOutput("\nBuy on credit (yes/no): ");
         if (aCreditoStringa.equalsIgnoreCase("yes")) {
             cash = false;
+            System.out.println("\nEmployees:");
             main.getEmployeeRegister().showEmployeesDB();
             String personaStringa = inputOutput("\nInsert the employee number (1 .. n)");
             int personaId = stringToInt(personaStringa);
@@ -164,7 +165,7 @@ public class GUI {
 
     private static void paymentMenu() {
         Employee persona = null;
-        System.out.println("Employees:");
+        System.out.println("\nEmployees:");
         main.getEmployeeRegister().showEmployeesDB();
         String personaStringa = inputOutput("\nChoose the employee (1..n): ");
         int personaId = stringToInt(personaStringa);
