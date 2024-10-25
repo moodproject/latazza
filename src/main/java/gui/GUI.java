@@ -181,9 +181,14 @@ public class GUI {
             paymentMenu();
         }
         String euroStringa = inputOutput("\nInsert the balance: ");
-        double euro_double = Double.parseDouble(euroStringa);
-        Euro e = new Euro(euro_double);
-        main.getPayment().pay(persona, e);
+        double euro_double;
+        try {
+        	euro_double = Double.parseDouble(euroStringa);
+        	Euro e = new Euro(euro_double);
+            main.getPayment().pay(persona, e);
+		} catch (NumberFormatException nfe) {
+			System.out.println("\nOperation aborted: a number was required \n");
+		}
         mainMenu();
     }
 
@@ -194,7 +199,7 @@ public class GUI {
         try {
             returnString = br.readLine();
         } catch (IOException e) {
-            System.out.println("Error!");
+            System.out.println("\nError");
             mainMenu();
         }
         return returnString;
@@ -205,7 +210,7 @@ public class GUI {
         try {
             returnInt = Integer.parseInt(value);
         } catch (NumberFormatException e) {
-            System.out.println("Insert an integer\n");
+            System.out.println("\nOperation aborted: an integer was required\n");
             mainMenu();
         }
         return returnInt;
