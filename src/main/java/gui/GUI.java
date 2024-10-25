@@ -147,7 +147,7 @@ public class GUI {
                 t = Beverages.CAMOMILLA;
                 break;
             default:
-                System.out.println("not valid Key");
+                System.out.println("\nNot valid beverage");
                 supplyMenu();
         }
 
@@ -164,6 +164,7 @@ public class GUI {
 
     private static void paymentMenu() {
         Employee persona = null;
+        System.out.println("Employees:");
         main.getEmployeeRegister().showEmployeesDB();
         String personaStringa = inputOutput("\nChoose the employee (1..n): ");
         int personaId = stringToInt(personaStringa);
@@ -175,7 +176,7 @@ public class GUI {
                 }
             }
         } else {
-            System.out.println("Employee not in the database");
+            System.out.println("\nEmployee not in the database\n");
             paymentMenu();
         }
         String euroStringa = inputOutput("\nInsert the balance: ");
