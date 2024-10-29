@@ -81,12 +81,12 @@ public class GUI {
         switch (tipo_numero) {
             case 1:
                 t = Beverages.CAFFE;
+                break;
             case 2:
                 t = Beverages.ARABICO;
                 break;
             case 3:
                 t = Beverages.THE;
-                break;
             case 4:
                 t = Beverages.THELIMONE;
                 break;
