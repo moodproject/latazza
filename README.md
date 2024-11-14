@@ -3,13 +3,13 @@ _LaTazza_ è un programma, da linea di comando, per gestire la fornitura di bust
 
 ## Descrizione
 In _LaTazza_, la segretaria aziendale può:
-* Visualizzare il saldo in cassa;
-* Visualizzare la quantità di bustine disponibili in deposito per ciascuna bevanda calda;
-* Visualizzare l'elenco degli impiegati debitori;
-* Registrare una fornitura di bustine di una bevanda calda;
-* Registrare la vendita di bustine di una bevanda calda ad impiegati (i quali possono pagare a credito) e visitatori;
-* Aggiornare il credito degli impiegati;
-* Aggiornare gli impiegati registrati.
+* Visualizzare il saldo in cassa (opzione 1);
+* Visualizzare la quantità di bustine disponibili in deposito per ciascuna bevanda calda (opzione 2);
+* Visualizzare l'elenco degli impiegati debitori (opzione 3);
+* Registrare una fornitura di bustine di una bevanda calda (opzione 4);
+* Registrare la vendita di bustine di una bevanda calda ad impiegati (i quali possono pagare a credito) e visitatori (opzione 5);
+* Aggiornare il credito degli impiegati (opzione 6);
+* Aggiornare gli impiegati registrati (opzione 7).
 
 ## Istruzioni per gli sviluppatori
 Il progetto è basato su Maven. Seguono alcune istruzioni utili per gli sviluppatori.
